@@ -1,4 +1,8 @@
 {
+    "variables": {
+        "ami": "ami-66506c1c"
+    },
+
     "builders": [
         {
             "ami_block_device_mappings": [
@@ -23,7 +27,7 @@
             "name": "amazon-ebs-hvm",
             "region": "{{user `region`}}",
             "security_group_id": "{{user `security_group_id`}}",
-            "source_ami": "{{user `ebs_hvm_source_ami`}}",
+            "source_ami": "{{user `ami`}}",
             "ssh_username": "ubuntu",
             "subnet_id": "{{user `subnet_id`}}",
             "tags": {
